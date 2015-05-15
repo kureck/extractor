@@ -1,8 +1,10 @@
 import sys
+from extractor.extractor import Extractor
 
 
 def run(in_root_dir, out_root_dir):
-    pass
+    extractor = Extractor(in_root_dir, out_root_dir)
+    extractor.folder_travel()
 
 if __name__ == '__main__':
     if len(sys.argv) <= 2:
@@ -11,4 +13,4 @@ if __name__ == '__main__':
         in_root_dir = sys.argv[1]
         out_root_dir = sys.argv[2]
 
-    run(in_root_dir, out_root_dir)
+        run(in_root_dir, out_root_dir)
